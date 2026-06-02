@@ -1,10 +1,10 @@
 "use client";
 
 import { navLinks } from "@/constants/navLinks";
-import Logo from "../components/Logo";
 import Button from "@/app/components/Button";
 import { Menu, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
+import Logo from "../components/Logo";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
