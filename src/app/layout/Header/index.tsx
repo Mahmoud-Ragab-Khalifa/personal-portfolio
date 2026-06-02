@@ -4,10 +4,31 @@ import { navLinks } from "@/constants/navLinks";
 import Logo from "../components/Logo";
 import Button from "@/app/components/Button";
 import { Menu, X } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const mobileMenuRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (!isMobileMenuOpen) return;
+
+    const handleClickOutside = (e: MouseEvent) => {
+      if (
+        mobileMenuRef.current &&
+        !mobileMenuRef.current.contains(e.target as Node)
+      ) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isMobileMenuOpen]);
 
   return (
     <header className="fixed inset-x-0 inset-s-0 py-5">
@@ -44,7 +65,10 @@ const Header = () => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden mt-5 glass-strong animate-fade-in">
+        <div
+          className="md:hidden mt-5 glass-strong animate-fade-in"
+          ref={mobileMenuRef}
+        >
           <div className="container mx-auto p-6 flex flex-col gap-4">
             {navLinks.map((link, index) => (
               <a
