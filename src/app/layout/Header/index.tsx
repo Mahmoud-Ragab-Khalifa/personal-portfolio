@@ -69,7 +69,7 @@ const Header = () => {
           className="md:hidden mt-5 glass-strong animate-fade-in"
           ref={mobileMenuRef}
         >
-          <div className="container mx-auto p-6 flex flex-col gap-4">
+          <div className="container mx-auto py-6 flex flex-col gap-4">
             {navLinks.map((link, index) => (
               <a
                 href={link.href}
