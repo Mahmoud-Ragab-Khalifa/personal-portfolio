@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Roboto } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Roboto({
+const inter = Inter({
   subsets: ["latin"],
 });
 
@@ -18,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${geistSans.className} antialiased`}>
+    <html lang="en" className={`${inter.className} antialiased`}>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
