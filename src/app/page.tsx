@@ -1,5 +1,5 @@
 const HomePage = () => {
-  return <main>HomePage</main>;
+  return <main className="min-h-dvh overflow-x-hidden"></main>;
 };
 
 export default HomePage;
