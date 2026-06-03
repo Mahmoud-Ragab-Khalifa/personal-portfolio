@@ -1,5 +1,9 @@
 import { dots } from "@/constants/dots";
 import Image from "next/image";
+import Button, { baseClasses } from "../components/Button";
+import { ArrowRight, Download } from "lucide-react";
+import AnimatedBorderButton from "../components/AnimatedBorderButton";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -59,6 +63,27 @@ const Hero = () => {
             React, Next.js, and TypeScript. I build scalable, performant web
             applications that users love.
           </p>
+
+          {/* CTAs */}
+          <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
+            <a
+              href="https://wa.me/201067055256"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`${baseClasses} lg:px-8 lg:py-4 lg:text-lg`}
+            >
+              Contact Me <ArrowRight className="w-5 h-5" />
+            </a>
+
+            <AnimatedBorderButton
+              href="/resume/MahmoudRagabResume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Download className="w-5 h-5" />
+              View Resume
+            </AnimatedBorderButton>
+          </div>
         </div>
 
         <div className="w-full max-w-2xs">Image</div>

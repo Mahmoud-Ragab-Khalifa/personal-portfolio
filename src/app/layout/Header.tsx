@@ -1,7 +1,7 @@
 "use client";
 
 import { navLinks } from "@/constants/navLinks";
-import Button from "@/app/components/Button";
+import Button, { baseClasses } from "@/app/components/Button";
 import { Menu, X } from "lucide-react";
 import { useRef, useState } from "react";
 import Logo from "../components/Logo";
@@ -38,9 +38,15 @@ const Header = () => {
         </div>
 
         {/* CTA Contact Me Button In Desktop View*/}
-        <Button size="sm" className="hidden md:flex">
+
+        <a
+          href="https://wa.me/201067055256"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`${baseClasses} px-4! py-2! text-sm! hidden! md:flex!`}
+        >
           Contact Me
-        </Button>
+        </a>
 
         {/* Mobile Menu Button */}
         <button
@@ -69,9 +75,15 @@ const Header = () => {
               </a>
             ))}
 
-            <Button onClick={() => setIsMobileMenuOpen(false)}>
+            <a
+              href="https://wa.me/201067055256"
+              onClick={() => setIsMobileMenuOpen(false)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`${baseClasses}`}
+            >
               Contact Me
-            </Button>
+            </a>
           </div>
         </div>
       )}
