@@ -1,13 +1,13 @@
 import { dots } from "@/constants/dots";
 import Image from "next/image";
 import { baseClasses } from "../components/Button";
-import { ArrowRight, Download } from "lucide-react";
+import { ArrowRight, ChevronDown, Download } from "lucide-react";
 import AnimatedBorderButton from "../components/AnimatedBorderButton";
 import { socialMediaLinks } from "@/constants/socialMediaLinks";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-dvh flex items-center pt-20 md:p-0 overflow-hidden bg-secondary">
+    <section className="relative min-h-dvh flex flex-col justify-center pt-20 overflow-hidden bg-secondary">
       <Image
         src={"/images/hero-section-image.png"}
         alt="Hero-Section"
@@ -133,6 +133,17 @@ const Hero = () => {
             <span className="text-sm font-medium">Available for work</span>
           </div>
         </div>
+      </div>
+
+      {/* Scroll Down */}
+      <div className="hidden md:block absolute bottom-8 left-1/2 -translate-x-1/2 animate-fade-in animation-delay-600">
+        <a
+          href="#about"
+          className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors group"
+        >
+          <span className="text-xs uppercase tracking-wider">Scroll</span>
+          <ChevronDown className="w-6 h-6 animate-bounce" />
+        </a>
       </div>
     </section>
   );
