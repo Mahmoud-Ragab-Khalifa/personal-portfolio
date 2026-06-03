@@ -1,7 +1,7 @@
 "use client";
 
 import { navLinks } from "@/constants/navLinks";
-import Button, { baseClasses } from "@/app/components/Button";
+import { baseClasses } from "@/app/components/Button";
 import { Menu, X } from "lucide-react";
 import { useRef, useState } from "react";
 import Logo from "../components/Logo";

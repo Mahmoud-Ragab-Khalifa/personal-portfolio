@@ -1,9 +1,14 @@
 import { dots } from "@/constants/dots";
 import Image from "next/image";
-import Button, { baseClasses } from "../components/Button";
+import { baseClasses } from "../components/Button";
 import { ArrowRight, Download } from "lucide-react";
 import AnimatedBorderButton from "../components/AnimatedBorderButton";
-import Link from "next/link";
+import {
+  GitHubIcon,
+  LinkedInIcon,
+  WhatsAppIcon,
+} from "../components/SocilaMediaIcons";
+import { socialMediaLinks } from "@/constants/socialMediaLinks";
 
 const Hero = () => {
   return (
@@ -83,6 +88,22 @@ const Hero = () => {
               <Download className="w-5 h-5" />
               View Resume
             </AnimatedBorderButton>
+          </div>
+
+          {/* Social Links */}
+          <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
+            <span className="text-sm text-muted-foreground">Follow me: </span>
+            {socialMediaLinks.map((social, idx) => (
+              <a
+                key={idx}
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all duration-300"
+              >
+                {<social.icon />}
+              </a>
+            ))}
           </div>
         </div>
 
