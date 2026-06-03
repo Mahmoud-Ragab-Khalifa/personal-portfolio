@@ -3,16 +3,11 @@ import Image from "next/image";
 import { baseClasses } from "../components/Button";
 import { ArrowRight, Download } from "lucide-react";
 import AnimatedBorderButton from "../components/AnimatedBorderButton";
-import {
-  GitHubIcon,
-  LinkedInIcon,
-  WhatsAppIcon,
-} from "../components/SocilaMediaIcons";
 import { socialMediaLinks } from "@/constants/socialMediaLinks";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-dvh flex items-center overflow-hidden bg-secondary">
+    <section className="relative min-h-dvh flex items-center pt-20 md:p-0 overflow-hidden bg-secondary">
       <Image
         src={"/images/hero-section-image.png"}
         alt="Hero-Section"
@@ -43,8 +38,8 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative w-full flex flex-col md:flex-row md:items-center gap-10 container">
-        <div className="flex-1 space-y-8">
+      <div className="relative w-full flex flex-col md:flex-row md:items-center gap-20 md:gap-10 container">
+        <div className="flex-1 max-w-2xl space-y-8">
           {/* Job Badge */}
           <div className="flex items-center gap-2 animate-fade-in glass w-fit text-sm rounded-full px-4 py-2">
             <span className="size-1.5 rounded-full bg-primary animate-pulse" />
@@ -107,7 +102,37 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="w-full max-w-2xs">Image</div>
+        <div className="w-full max-w-2xs relative mx-auto animate-fade-in animation-delay-500 glass rounded-2xl glow-border">
+          <div className="relative aspect-4/5 md:aspect-2/3 rounded-2xl overflow-hidden">
+            <Image
+              src={"/images/mahmoud-profile-image.png"}
+              alt="Profile-Image"
+              fill
+              sizes="288px"
+              className="object-cover object-center"
+              priority={true}
+              loading="eager"
+            />
+
+            {/* Image Overlay */}
+            <div className="absolute inset-0 bg-linear-to-b from-background/50 via-background/70 to-background/90" />
+          </div>
+
+          {/* Glow Border */}
+          <div className="absolute inset-0 rounded-2xl bg-linear-to-br from-primary/30 via-transparent  to-primary/10 blur-2xl animate-pulse" />
+
+          {/* Floating Status Badge */}
+          <div className="absolute flex flex-col -top-4 -left-5 glass rounded-xl px-4 py-3 animate-float">
+            <span className="text-2xl font-bold text-primary">2+</span>
+            <span className="text-xs text-muted-foreground">Years Exp.</span>
+          </div>
+
+          {/* Floating Exp Badge */}
+          <div className="flex items-center gap-3 absolute -bottom-4 -right-5 glass rounded-xl px-4 py-3 animate-float">
+            <div className="size-3 bg-green-500 rounded-full animate-pulse" />
+            <span className="text-sm font-medium">Available for work</span>
+          </div>
+        </div>
       </div>
     </section>
   );
