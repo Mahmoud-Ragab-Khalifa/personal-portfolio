@@ -3,12 +3,14 @@
 import { navLinks } from "@/constants/navLinks";
 import { baseClasses } from "@/app/components/Button";
 import { Menu, X } from "lucide-react";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Logo from "../components/Logo";
 import useClickOutside from "@/hooks/useClickOutside";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const mobileMenuRef = useRef<HTMLDivElement | null>(null);
 
@@ -18,8 +20,20 @@ const Header = () => {
     isMobileMenuOpen,
   );
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="fixed z-100 inset-x-0 inset-s-0 py-5">
+    <header
+      className={`fixed z-100 inset-x-0 inset-s-0 ${isScrolled ? "bg-surface py-4" : "bg-transparent py-5"} transition-all duration-300`}
+    >
       <nav className="container flex items-center justify-between">
         {/* Personal Logo */}
         <Logo />
