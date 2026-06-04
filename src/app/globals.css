@@ -190,3 +190,25 @@
       0 0 80px color-mix(in srgb, var(--color-primary) 25%, transparent);
   }
 }
+
+/* Customize Scrollbar */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-background);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: color-mix(in srgb, var(--color-primary) 50%, transparent);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    to bottom,
+    var(--color-surface) var(--color-primary)
+  );
+}
