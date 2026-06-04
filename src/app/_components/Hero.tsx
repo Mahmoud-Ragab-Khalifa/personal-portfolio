@@ -7,7 +7,7 @@ import { socialMediaLinks } from "@/constants/socialMediaLinks";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-dvh flex flex-col justify-center pt-20 overflow-hidden bg-secondary">
+    <section className="relative min-h-dvh flex flex-col justify-center py-20 overflow-hidden bg-secondary">
       <Image
         src={"/images/hero-section-image.png"}
         alt="Hero-Section"
