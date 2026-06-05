@@ -28,6 +28,7 @@ import {
   SiPostman,
   SiSass,
   SiShadcnui,
+  SiResend,
 } from "react-icons/si";
 import { TbBinaryTree2 } from "react-icons/tb";
 
@@ -44,6 +45,7 @@ export const skills = [
   { name: "Context API", icon: TbBinaryTree2, color: "#61DAFB" },
   { name: "React Hook Form", icon: SiReacthookform, color: "#EC5990" },
   { name: "Zod", icon: SiZod, color: "#3E67B1" },
+  { name: "Resend", icon: SiResend, color: "#F8FAFC" },
   { name: "React Query", icon: SiReactquery, color: "#FF4154" },
   { name: "Axios", icon: SiAxios, color: "#5A29E4" },
   { name: "RESTful APIs", icon: SiPostman, color: "#FF6C37" },
