@@ -1,9 +1,11 @@
 import { dots } from "@/constants/dots";
 import Image from "next/image";
 import { baseClasses } from "../components/Button";
-import { ArrowRight, ChevronDown, Download } from "lucide-react";
 import AnimatedBorderButton from "../components/AnimatedBorderButton";
 import { socialMediaLinks } from "@/constants/socialMediaLinks";
+import { FaChevronDown } from "react-icons/fa";
+import { LiaFileDownloadSolid } from "react-icons/lia";
+import { FaLocationArrow } from "react-icons/fa6";
 
 const Hero = () => {
   return (
@@ -72,7 +74,7 @@ const Hero = () => {
               rel="noopener noreferrer"
               className={`${baseClasses} lg:px-8 lg:py-4 lg:text-lg`}
             >
-              Contact Me <ArrowRight className="w-5 h-5" />
+              Contact Me <FaLocationArrow size={22} />
             </a>
 
             <AnimatedBorderButton
@@ -80,7 +82,7 @@ const Hero = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Download className="w-5 h-5" />
+              <LiaFileDownloadSolid size={22} />
               View Resume
             </AnimatedBorderButton>
           </div>
@@ -96,7 +98,7 @@ const Hero = () => {
                 rel="noopener noreferrer"
                 className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all duration-300"
               >
-                {<social.icon />}
+                {<social.icon size={20} />}
               </a>
             ))}
           </div>
@@ -142,7 +144,7 @@ const Hero = () => {
           className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors group"
         >
           <span className="text-xs uppercase tracking-wider">Scroll</span>
-          <ChevronDown className="w-6 h-6 animate-bounce" />
+          <FaChevronDown className="animate-bounce" />
         </a>
       </div>
     </section>

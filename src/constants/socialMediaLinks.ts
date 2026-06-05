@@ -1,17 +1,13 @@
-import {
-  GitHubIcon,
-  LinkedInIcon,
-  WhatsAppIcon,
-} from "@/app/components/SocilaMediaIcons";
+import { FaGithub, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 
 export const socialMediaLinks = [
   {
-    icon: GitHubIcon,
+    icon: FaGithub,
     href: "https://github.com/Mahmoud-Ragab-Khalifa",
   },
   {
-    icon: LinkedInIcon,
+    icon: FaLinkedinIn,
     href: "http://linkedin.com/in/mahmoud-ragab-khalifa",
   },
-  { icon: WhatsAppIcon, href: "https://wa.me/201067055256" },
+  { icon: FaWhatsapp, href: "https://wa.me/201067055256" },
 ];

@@ -1,7 +1,8 @@
 import { projects } from "@/constants/projects";
-import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import { GitHubIcon } from "../components/SocilaMediaIcons";
+import { MdArrowOutward } from "react-icons/md";
+import { FaGithub } from "react-icons/fa6";
 
 const Projects = () => {
   return (
@@ -59,7 +60,7 @@ const Projects = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <ArrowUpRight className="w-5 h-5" />
+                    <MdArrowOutward className="w-5 h-5" />
                   </a>
                   <a
                     href={project.github}
@@ -67,7 +68,7 @@ const Projects = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <GitHubIcon />
+                    <FaGithub className="w-5 h-5" />
                   </a>
                 </div>
               </div>
@@ -78,7 +79,7 @@ const Projects = () => {
                   <h3 className="text-xl font-semibold group-hover:text-primary transition-colors">
                     {project.title}
                   </h3>
-                  <ArrowUpRight
+                  <MdArrowOutward
                     className="w-5 h-5 
                   text-muted-foreground group-hover:text-primary
                    group-hover:translate-x-1 

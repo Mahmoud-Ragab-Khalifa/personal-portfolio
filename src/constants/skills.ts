@@ -27,6 +27,7 @@ import {
   SiVite,
   SiPostman,
   SiSass,
+  SiShadcnui,
 } from "react-icons/si";
 import { TbBinaryTree2 } from "react-icons/tb";
 
@@ -54,6 +55,7 @@ export const skills = [
   { name: "Tailwind CSS", icon: SiTailwindcss, color: "#06B6D4" },
   { name: "Bootstrap", icon: FaBootstrap, color: "#7952B3" },
   { name: "Material UI", icon: SiMui, color: "#007FFF" },
+  { name: "Shadcn UI", icon: SiShadcnui, color: "#FFFFFF" },
   { name: "Supabase", icon: SiSupabase, color: "#3ECF8E" },
   { name: "Prisma ORM", icon: SiPrisma, color: "#2D3748" },
   { name: "Git", icon: FaGitAlt, color: "#F05032" },

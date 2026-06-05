@@ -1,6 +1,6 @@
 import { socialMediaLinks } from "@/constants/socialMediaLinks";
 import AnimatedBorderButton from "../components/AnimatedBorderButton";
-import { Download } from "lucide-react";
+import { FcDownload } from "react-icons/fc";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -27,7 +27,7 @@ const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Download className="w-5 h-5" />
+          <FcDownload className="w-5 h-5 animate-bounce" />
           View Resume
         </AnimatedBorderButton>
 
@@ -41,7 +41,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all"
             >
-              <social.icon />
+              <social.icon size={20} />
             </a>
           ))}
         </div>
