@@ -2,10 +2,11 @@
 
 import { navLinks } from "@/constants/navLinks";
 import { baseClasses } from "@/app/components/Button";
-import { Menu, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import Logo from "../components/Logo";
 import useClickOutside from "@/hooks/useClickOutside";
+import { GrMenu } from "react-icons/gr";
+import { IoClose } from "react-icons/io5";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -67,7 +68,7 @@ const Header = () => {
           className="md:hidden p-2 text-foreground cursor-pointer bg-surface rounded-full"
           onClick={() => setIsMobileMenuOpen((prev) => !prev)}
         >
-          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          {isMobileMenuOpen ? <IoClose size={24} /> : <GrMenu size={24} />}
         </button>
       </nav>
 

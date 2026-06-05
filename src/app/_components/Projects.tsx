@@ -1,6 +1,5 @@
 import { projects } from "@/constants/projects";
 import Image from "next/image";
-import { GitHubIcon } from "../components/SocilaMediaIcons";
 import { MdArrowOutward } from "react-icons/md";
 import { FaGithub } from "react-icons/fa6";
 
