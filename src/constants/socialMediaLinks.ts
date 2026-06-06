@@ -7,7 +7,7 @@ export const socialMediaLinks = [
   },
   {
     icon: FaLinkedinIn,
-    href: "http://linkedin.com/in/mahmoud-ragab-khalifa",
+    href: "https://www.linkedin.com/in/mahmoud-ragab-5ba895414",
   },
   { icon: FaWhatsapp, href: "https://wa.me/201067055256" },
 ];
